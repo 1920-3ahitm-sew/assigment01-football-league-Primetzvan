@@ -33,10 +33,10 @@ public class Main {
     }
 
     private static void printTable(List<Team> teams){
-        System.out.println("Team             PTS   W   D   L   GF   GA   GD");
+        System.out.println("Team                   PTS    W      D     L    GF    GA    GD");
 
         for (int i = 0; i < teams.size(); i++) {
-            System.out.printf(teams.get(i).getName() + "         " + teams.get(i).getPoints() + "  " + teams.get(i).getWins() + "  " + teams.get(i).getDraws() + "  "+ teams.get(i).getDefeats() + "  "+ teams.get(i).getGoalsShot() + "  "+ teams.get(i).getGoalsRecived() + "  "+ teams.get(i).getGoalDifference() + "  \n");
+            System.out.printf("%-20s %5d %5d %5d %5d %5d %5d %5d\n", teams.get(i).getName(),teams.get(i).getPoints(), teams.get(i).getWins(), teams.get(i).getDraws(), teams.get(i).getDefeats(), teams.get(i).getGoalsShot(), teams.get(i).getGoalsRecived(), teams.get(i).getGoalDifference());
         }
     }
 
